@@ -1,0 +1,172 @@
+<html>
+
+<head>
+    <title>air co_level prediction model</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .image-1 {
+            width: 100%;
+            height: 400px;
+        }
+
+        .heading {
+            min-height: 60px;
+            background-color: #333;
+            border-radius: 30px;
+        }
+
+        .heading h1 {
+            font-size: 30px;
+            font-weight: bold;
+            padding: 20px;
+            font-family: sans-serif;
+            color: white;
+            text-align: center;
+
+        }
+
+        .from-sec {
+            background-color: #777;
+            height: 450px;
+        }
+
+        .pred {
+            padding-top: 80px;
+        }
+
+        input[type="text"] {
+            border: none;
+            padding: 10px;
+            width: 250px;
+            margin-right: 5px;
+            margin-bottom: 4px;
+
+        }
+
+        .btn {
+            margin-top: 50px;
+        }
+
+        input[type="submit"] {
+            color: white;
+            background-color: #333;
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            border: none;
+            height: 50px;
+            width: 150px;
+            border-radius: 50px;
+            padding: 10px;
+            margin-bottom: 40px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: rgb(255, 93, 93);
+            font-weight: bold;
+        }
+
+        .from-sec h1 {
+            color: white;
+            font-size: 30px;
+        }
+
+        .City {
+            border: none;
+            padding: 10px;
+            width: 250px;
+            margin-right: 5px;
+            margin-bottom: 4px;
+        }
+
+        .Name {
+            border: none;
+            padding: 10px;
+            width: 250px;
+            margin-right: 5px;
+            margin-bottom: 4px;
+        }
+
+        .State {
+            border: none;
+            padding: 10px;
+            width: 250px;
+            margin-right: 5px;
+            margin-bottom: 4px;
+        }
+
+        .category {
+            border: none;
+            padding: 10px;
+            width: 250px;
+            margin-right: 5px;
+            margin-bottom: 4px;
+        }
+
+        .footer h3 {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 25px;
+            font-weight: bold;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="images">
+            <img src="static\images\main-banner.jpg" class="image-1">
+        </div>
+    </div>
+    <div class="container">
+        <div class="heading">
+            <h1>air co_level prediction model</h1>
+        </div>
+    </div>
+    <div class="from-sec">
+        <center>
+            <form name="prediction" action="/predict" method="POST" class="pred">
+                <input type="text" placeholder="CO_GT" name="CO_GT">
+                <input type="text" placeholder="PT08_S1_CO" name="PT08_S1_CO">
+                <input type="text" placeholder="NMHC_GT" name="NMHC_GT">
+                <input type="text" placeholder="C6H6_GT" name="C6H6_GT">
+                <input type="text" placeholder="PT08_S2_NMHC" name="PT08_S2_NMHC">
+                <input type="text" placeholder="Nox_GT" name="Nox_GT">
+                <input type="text" placeholder="PT08_S3_Nox" name="PT08_S3_Nox">
+                <input type="text" placeholder="NO2_GT" name="NO2_GT">
+                <input type="text" placeholder="PT08_S4_NO2" name="PT08_S4_NO2">
+                <input type="text" placeholder="PT08_S5_O3" name="PT08_S5_O3">
+                <input type="text" placeholder="T" name="T">
+                <input type="text" placeholder="RH" name="RH">
+                <input type="text" placeholder="AH" name="AH">
+                <input type="text" placeholder="date" name="date">
+                <input type="text" placeholder="time" name="time">
+                <div class="btn">
+                    <input type="submit" class="submit" value="Predict">
+                </div>
+                <div>
+                    <h1> {{ prediction_text }}</h1>
+                </div>
+            </form>
+        </center>
+    </div>
+    <div>
+        <h6> </h6>
+    </div>
+    <div class="footer">
+        <h3>
+            Delivery Contact:
+            harshitpatel8980@gmail.com<br>
+        </h3>
+    </div>
+</body>
+
+</html>
